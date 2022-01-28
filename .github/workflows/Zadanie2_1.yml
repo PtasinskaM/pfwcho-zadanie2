@@ -2,11 +2,11 @@ name: GitHub Action flow to Docker hub
 
 on:
   push:
-    branches: [main]
+    branches: [master]
 
 jobs:
   build-push-images:
-    name: Budowa i publikacja obrazw na repozytorium
+    name: Zadanie 2.1
     runs-on: ubuntu-latest
 
     steps:
@@ -30,8 +30,8 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: ./
-          file: ./dockerfile.v1
+          file: ./Dockerfile
           push: true
           tags: |
-            spg51/lab:ghfront1
+            monika98p/zadanie2:podpunkt1
           
